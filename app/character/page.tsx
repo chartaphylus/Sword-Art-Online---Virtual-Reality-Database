@@ -8,6 +8,7 @@ import Link from "next/link"
 import { characters } from "@/lib/charactersData"
 import "keen-slider/keen-slider.min.css"
 import { useKeenSlider } from "keen-slider/react"
+import Navbar from "@/components/navbar"
 
 export default function SAOCharacters() {
 
@@ -27,35 +28,17 @@ export default function SAOCharacters() {
     >
       <div className="min-h-screen bg-background/80 backdrop-blur-sm">
         {/* 🔹 Header */}
-        <header className="border-b border-border py-4">
-          <nav className="max-w-7xl mx-auto flex justify-between items-center px-4">
-            <h1 className="text-xl md:text-2xl font-bold text-accent">
-              SAO Database
-            </h1>
-            <ul className="flex gap-6 text-sm font-medium">
-              <li>
-                <Link href="/" className="hover:underline">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:underline">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/character" className="hover:underline">
-                  Character
-                </Link>
-              </li>
-              <li>
-                <Link href="/database-skill" className="hover:underline">
-                  Database Skill
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <div>
+          <Navbar />
+        </div>
+        <br /><br />
+
+        <div className="relative py-12 md:py-20 px-4 text-center">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            Main Character of Sword Art Online Series
+          </p>
+        </div>
+
 
         {/* 🔹 Characters */}
         <main className="max-w-7xl mx-auto px-4 py-8">

@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Sword, Users, Calendar, Star, Play, Book, Heart } from "lucide-react"
 import Link from "next/link"
 import ArcList from "@/components/arcList"
+import Navbar from "@/components/navbar"
 
 export default function AboutSAO() {
   return (
@@ -20,40 +21,14 @@ export default function AboutSAO() {
       <div className="relative z-10 min-h-screen">
 
         {/* Header */}
-        {/* 🔹 Header */}
-        <header className="border-b border-border py-4">
-          <nav className="max-w-7xl mx-auto flex justify-between items-center px-4">
-            <h1 className="text-xl md:text-2xl font-bold text-accent">
-              SAO Database
-            </h1>
-            <ul className="flex gap-6 text-sm font-medium">
-              <li>
-                <Link href="/" className="hover:underline">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:underline">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/character" className="hover:underline">
-                  Character
-                </Link>
-              </li>
-              <li>
-                <Link href="/database-skill" className="hover:underline">
-                  Database Skill
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <div>
+          <Navbar />
+        </div>
+        <br /><br />
 
         {/* Hero Section */}
         <div className="relative py-12 md:py-20 px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-accent">SWORD ART ONLINE</h1>
+          {/* <h1 className="text-4xl md:text-6xl font-bold mb-6 text-accent">SWORD ART ONLINE</h1> */}
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
             The Revolutionary Virtual Reality MMORPG That Changed Everything
           </p>

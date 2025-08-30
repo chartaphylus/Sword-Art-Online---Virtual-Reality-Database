@@ -2,9 +2,10 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { RefreshCw, Sword, ArrowRightIcon } from "lucide-react"
+import { RefreshCw, Sword } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import Navbar from "@/components/navbar"
 
 interface AnimeQuote {
   anime: string
@@ -57,28 +58,9 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="absolute top-0 w-full z-20">
-        <nav className="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
-          <h1 className="text-2xl font-bold text-accent">SAO Database</h1>
-          <div className="flex gap-4">
-            <Link href="/about">
-              <Button variant="outline" size="sm" className="bg-transparent border border-white/30 text-white hover:bg-white/10">
-                About
-              </Button>
-            </Link>
-            <Link href="/character">
-              <Button variant="outline" size="sm" className="bg-transparent border border-white/30 text-white hover:bg-white/10">
-                Character
-              </Button>
-            </Link>
-            <Link href="/database-skill">
-              <Button variant="outline" size="sm" className="bg-transparent border border-white/30 text-white hover:bg-white/10">
-                Database Skill
-              </Button>
-            </Link>
-          </div>
-        </nav>
-      </header>
+      <div>
+        <Navbar />
+      </div>
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -89,6 +71,7 @@ export default function HomePage() {
           }}
         />
         <div className="absolute inset-0 bg-black/50" />
+        <br /><br />
 
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
@@ -106,7 +89,7 @@ export default function HomePage() {
                 <Sword className="h-5 w-5" /> Anime Quote
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="overflow-y-auto max-h-[50vh]">
               {quote && !quoteLoading ? (
                 <div className="space-y-4">
                   <blockquote className="italic text-lg md:text-xl">"{quote.quote}"</blockquote>
