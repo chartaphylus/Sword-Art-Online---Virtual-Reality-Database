@@ -90,7 +90,7 @@ export const characters: Character[] = [
     name: "Eugeo",
     title: "Blue Rose Swordsman",
     description: "Kirito’s best friend in Underworld, wielder of the Blue Rose Sword.",
-    image: "https://i.pinimg.com/1200x/0b/f7/2b/0bf72bc2b7d55c51fd68aed44f41bdb6.jpg",
+    image: "https://i.pinimg.com/736x/5b/a4/4b/5ba44bb6aec7a1aeda4233ffa50e1807.jpg",
     arc: "Alicization"
   },
   {

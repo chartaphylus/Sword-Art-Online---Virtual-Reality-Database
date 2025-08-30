@@ -28,24 +28,33 @@ export default function SAOCharacters() {
       <div className="min-h-screen bg-background/80 backdrop-blur-sm">
         {/* 🔹 Header */}
         <header className="border-b border-border py-4">
-          <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Link href="/">
-                <Button variant="outline" size="sm" className="cyber-border bg-transparent">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  Home
-                </Button>
-              </Link>
-              <Link href="/about">
-                <Button variant="outline" size="sm" className="cyber-border bg-transparent">
-                  About
-                </Button>
-              </Link>
-            </div>
-            <h1 className="text-xl md:text-2xl font-bold text-accent neon-glow">
-              SAO Characters
+          <nav className="max-w-7xl mx-auto flex justify-between items-center px-4">
+            <h1 className="text-xl md:text-2xl font-bold text-accent">
+              SAO Database
             </h1>
-          </div>
+            <ul className="flex gap-6 text-sm font-medium">
+              <li>
+                <Link href="/" className="hover:underline">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:underline">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/character" className="hover:underline">
+                  Character
+                </Link>
+              </li>
+              <li>
+                <Link href="/database-skill" className="hover:underline">
+                  Database Skill
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </header>
 
         {/* 🔹 Characters */}
@@ -107,6 +116,26 @@ export default function SAOCharacters() {
             ))}
           </div>
         </main>
+        {/* 🔹 Footer */}
+        <footer
+            className="relative w-full bg-center bg-cover text-white mt-10"
+            style={{
+                backgroundImage:
+                "url('https://i.pinimg.com/1200x/72/c6/66/72c6667249de7cb5d2b0dc223cac4f4c.jpg')",
+            }}
+            >
+            {/* Overlay semi-transparent */}
+            <div className="absolute inset-0 bg-black/50"></div>
+
+            {/* Konten Footer */}
+            <div className="relative z-10 flex items-center justify-center py-20 md:py-32">
+                <div className="max-w-7xl px-4 text-center">
+                <p className="text-sm">
+                    © {new Date().getFullYear()} SAO Database. All rights reserved.
+                </p>
+                </div>
+            </div>
+            </footer>
       </div>
     </div>
   )
